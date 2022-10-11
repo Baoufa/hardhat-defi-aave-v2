@@ -1,0 +1,40 @@
+{
+  "name": "raffle-lottery",
+  "version": "1.0.0",
+  "author": "Benjamin Anoufa",
+  "license": "MIT",
+  "scripts": {
+    "encrypt": "node scripts/encryptKey.js",
+    "test:hh": "yarn hardhat test --network hardhat",
+    "test:local": "yarn hardhat test --network localhost",
+    "test:goerli": "yarn hardhat test --network goerli",
+    "start:local": "yarn hardhat node",
+    "mock:local": "yarn hardhat run scripts/mockOffchain.js --network localhost",
+    "deploy:hh": "yarn hardhat deploy --network hardhat",
+    "deploy:local": "yarn hardhat deploy --network localhost",
+    "deploy:goerli": "yarn hardhat deploy --network goerli",
+    "lint": "yarn solhint 'contracts/*.sol'",
+    "lint:fix": "yarn solhint 'contracts/.*sol --fix",
+    "format": "yarn prettier --write",
+    "coverage": "yarn hardhat coverage"
+  },
+  "devDependencies": {
+    "@aave/protocol-v2": "^1.0.1",
+    "@chainlink/contracts": "^0.4.1",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.2",
+    "ethers": "^5.7.1",
+    "hardhat": "^2.11.2",
+    "hardhat-contract-sizer": "^2.6.1",
+    "hardhat-deploy": "^0.11.15",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.8.2"
+  }
+}
